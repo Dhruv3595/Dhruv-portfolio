@@ -88,8 +88,10 @@ export default function About() {
                             onClick={() => setIsFlipped(!isFlipped)}
                         >
                             <img
-                                src={isFlipped ? '/DHRUV.png' : '/Dhruv_formal.jfif'}
+                                src={isFlipped ? '/DHRUV.jpg' : '/Dhruv_formal.jfif'}
                                 alt="Dhruv Pandya"
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
