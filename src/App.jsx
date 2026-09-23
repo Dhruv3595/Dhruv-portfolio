@@ -13,16 +13,8 @@ import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
     <>
-      <AnimatePresence mode="wait">
-        {isLoading && (
-          <Preloader onComplete={() => setIsLoading(false)} />
-        )}
-      </AnimatePresence>
-
       <div className="min-h-screen bg-[#08090d] text-slate-100 font-sans relative overflow-hidden">
         {/* Ambient background glows */}
         <div className="ambient-glow w-[500px] h-[500px] bg-indigo-600/10 top-[-100px] left-[-100px]" />

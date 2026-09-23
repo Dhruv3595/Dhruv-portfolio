@@ -42,7 +42,7 @@ const traits = [
 ];
 
 export default function About() {
-    const [ref, isInView] = useInView(0.15);
+    const [ref, isInView] = useInView(0.01);
     const [isFlipped, setIsFlipped] = useState(false);
 
     return (
@@ -52,7 +52,7 @@ export default function About() {
                 <div>
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={isInView ? { opacity: 1 } : {}}
+                        animate={{ opacity: 1 }}
                         className="flex items-center gap-3 mb-3"
                     >
                         <div className="h-px w-8 bg-gradient-to-r from-indigo-500 to-transparent" />
@@ -63,7 +63,7 @@ export default function About() {
 
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         className="text-4xl md:text-5xl font-display font-extrabold text-white leading-tight"
                     >
@@ -79,7 +79,7 @@ export default function About() {
                     {/* Left Photo Frame with Pill Pagination Dots */}
                     <motion.div
                         initial={{ opacity: 0, x: -40 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2, duration: 0.8 }}
                         className="lg:col-span-2 flex flex-col items-center"
                     >
@@ -117,7 +117,7 @@ export default function About() {
                     {/* Right Text Narrative */}
                     <motion.div
                         initial={{ opacity: 0, x: 40 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
                         className="lg:col-span-3 space-y-6"
                     >
@@ -146,7 +146,7 @@ export default function About() {
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, y: 20 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
                             whileHover={{ y: -5 }}
                             className="bento-card p-6 text-center cursor-default group"

@@ -10,35 +10,49 @@ const roles = [
 ];
 
 function AnimatedCounter({ target, suffix = '', decimals = 0 }) {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(target);
     const ref = useRef(null);
     const counted = useRef(false);
 
     useEffect(() => {
         const el = ref.current;
         if (!el) return;
+
+        const startCount = () => {
+            if (counted.current) return;
+            counted.current = true;
+            const num = parseFloat(target);
+            const duration = 1200;
+            const steps = 40;
+            const increment = num / steps;
+            let current = 0;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= num) {
+                    current = num;
+                    clearInterval(timer);
+                }
+                setCount(decimals > 0 ? current.toFixed(decimals) : Math.floor(current));
+            }, duration / steps);
+        };
+
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting && !counted.current) {
-                    counted.current = true;
-                    const num = parseFloat(target);
-                    const duration = 2000;
-                    const steps = 60;
-                    const increment = num / steps;
-                    let current = 0;
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= num) {
-                            current = num;
-                            clearInterval(timer);
-                        }
-                        setCount(decimals > 0 ? current.toFixed(decimals) : Math.floor(current));
-                    }, duration / steps);
+                if (entry.isIntersecting || entry.intersectionRatio > 0) {
+                    startCount();
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.01, rootMargin: '50px 0px' }
         );
+
         observer.observe(el);
+
+        // Immediate check if element is in viewport on mobile
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 100 && rect.bottom > 0) {
+            startCount();
+        }
+
         return () => observer.unobserve(el);
     }, [target, decimals]);
 
