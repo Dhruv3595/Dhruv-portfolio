@@ -9,7 +9,7 @@
   <meta name="keywords" content="Dhruv Pandya, Frontend Developer, React.js Developer, JavaScript Engineer, Web Development, Portfolio, UI/UX Design, Responsive Web Apps, React Developer Jobs" />
   <meta name="author" content="Dhruv Pandya" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://yourwebsite.com" />
+  <link rel="canonical" href="https://dhruvpandya.me" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
@@ -17,36 +17,230 @@
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourwebsite.com" />
+  <meta property="og:url" content="https://dhruvpandya.me" />
   <meta property="og:title" content="Dhruv Pandya | Frontend Developer | React.js Expert" />
   <meta property="og:description" content="Dhruv Pandya – Frontend Developer specializing in React.js, building fast, responsive, and modern web applications with premium aesthetics." />
-  <meta property="og:image" content="https://yourwebsite.com/preview.jpg" />
+  <meta property="og:image" content="https://dhruvpandya.me/DHRUV.jpg" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://yourwebsite.com" />
+  <meta property="twitter:url" content="https://dhruvpandya.me" />
   <meta property="twitter:title" content="Dhruv Pandya | Frontend Developer | React.js Expert" />
   <meta property="twitter:description" content="Building high-performance, modern web applications with React.js. Check out my frontend portfolio." />
-  <meta property="twitter:image" content="https://yourwebsite.com/preview.jpg" />
+  <meta property="twitter:image" content="https://dhruvpandya.me/DHRUV.jpg" />
 
   <!-- Theme & Mobile Integration -->
-  <meta name="theme-color" content="#030014" />
+  <meta name="theme-color" content="#08090d" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- Preload Critical Profile Image for Millisecond Render -->
-  <link rel="preload" href="/DHRUV.jpg" as="image" type="image/jpeg" />
-
-  <!-- Non-blocking Google Fonts with System Font Fallbacks -->
+  <!-- Non-blocking Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
   </noscript>
+
+  <!-- CRITICAL INLINE CSS — renders BEFORE any JS loads -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #08090d;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    .shell-header {
+      position: fixed; top: 0; width: 100%; z-index: 50;
+      background: transparent; padding: 1.5rem;
+    }
+    .shell-header-inner {
+      max-width: 80rem; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .shell-brand {
+      display: flex; align-items: center; gap: 0.5rem;
+      text-decoration: none;
+    }
+    .shell-logo {
+      width: 2.25rem; height: 2.25rem; border-radius: 0.75rem;
+      background: linear-gradient(135deg, #6366f1, #9333ea);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 900; color: #fff; font-size: 0.875rem;
+    }
+    .shell-brand-text { display: flex; flex-direction: column; }
+    .shell-brand-name {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 700; color: #fff; font-size: 1rem; line-height: 1.2;
+    }
+    .shell-brand-name span { color: #818cf8; }
+    .shell-brand-role {
+      font-size: 0.6875rem; color: #94a3b8; font-weight: 500; letter-spacing: 0.025em;
+    }
+    .shell-hero {
+      min-height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center; padding: 8rem 1.5rem 4rem;
+    }
+    .shell-hero-inner { max-width: 56rem; margin: 0 auto; }
+    .shell-badge {
+      display: inline-flex; align-items: center; gap: 0.625rem;
+      padding: 0.375rem 1rem; border-radius: 9999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(30, 41, 59, 1);
+      margin-bottom: 2rem;
+    }
+    .shell-badge-dot {
+      width: 0.5rem; height: 0.5rem; border-radius: 50%;
+      background: #34d399;
+    }
+    .shell-badge-text {
+      font-size: 0.75rem; font-weight: 500; color: #cbd5e1; letter-spacing: 0.025em;
+    }
+    .shell-h1 {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 800; font-size: clamp(2.25rem, 6vw, 4.5rem);
+      line-height: 1.1; letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+    }
+    .shell-gradient {
+      background: linear-gradient(135deg, #ffffff 30%, #a855f7 70%, #06b6d4 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .shell-typewriter {
+      height: 2.5rem; display: flex; align-items: center;
+      justify-content: center; font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 500; color: #cbd5e1; margin-bottom: 1.5rem;
+    }
+    .shell-typewriter .muted { color: #64748b; margin-right: 0.5rem; }
+    .shell-typewriter .typed { color: #22d3ee; font-weight: 600; }
+    .shell-bio {
+      font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+      color: #94a3b8; max-width: 42rem; margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+    .shell-buttons {
+      display: flex; flex-direction: column; gap: 1rem;
+      justify-content: center; align-items: center;
+    }
+    @media (min-width: 640px) { .shell-buttons { flex-direction: row; } }
+    .shell-btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.75rem; border-radius: 9999px;
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 600; font-size: 0.925rem; color: #fff;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+      text-decoration: none; border: none; cursor: pointer;
+    }
+    .shell-btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.75rem; border-radius: 9999px;
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 600; font-size: 0.925rem; color: #f8fafc;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      text-decoration: none; cursor: pointer;
+    }
+    .shell-stats {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1rem; max-width: 48rem; margin: 2.5rem auto 0;
+    }
+    @media (min-width: 640px) { .shell-stats { grid-template-columns: repeat(4, 1fr); } }
+    .shell-stat {
+      padding: 1.25rem; text-align: center;
+      background: linear-gradient(135deg, rgba(20,23,36,0.7), rgba(13,15,25,0.5));
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 1.25rem;
+    }
+    .shell-stat-num {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-size: clamp(1.5rem, 3vw, 1.875rem);
+      font-weight: 900; color: #fff;
+    }
+    .shell-stat-label {
+      font-size: 0.75rem; color: #94a3b8; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem;
+    }
+    /* Hide shell when React takes over */
+    #shell { transition: opacity 0.15s ease; }
+    #shell.shell-hidden { opacity: 0; pointer-events: none; position: absolute; }
+  </style>
 </head>
 
 <body>
+  <!-- INSTANT PAINT SHELL — visible in <50ms, before any JS loads -->
+  <div id="shell">
+    <header class="shell-header">
+      <div class="shell-header-inner">
+        <a href="#" class="shell-brand">
+          <div class="shell-logo">DP</div>
+          <div class="shell-brand-text">
+            <span class="shell-brand-name">Dhruv Pandya<span>.</span></span>
+            <span class="shell-brand-role">Software Engineer</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <section class="shell-hero">
+      <div class="shell-hero-inner">
+        <div class="shell-badge">
+          <span class="shell-badge-dot"></span>
+          <span class="shell-badge-text">Available for New Opportunities</span>
+        </div>
+
+        <h1 class="shell-h1">
+          Hi, I'm <span class="shell-gradient">Dhruv Pandya</span>
+        </h1>
+
+        <div class="shell-typewriter">
+          <span class="muted">I craft</span>
+          <span class="typed">Full Stack Web Applications</span>
+        </div>
+
+        <p class="shell-bio">
+          Software Engineer crafting beautiful, performant web applications and
+          data-driven solutions with modern tech stacks.
+        </p>
+
+        <div class="shell-buttons">
+          <a href="#projects" class="shell-btn-primary">
+            <span>View My Work</span>
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="#contact" class="shell-btn-secondary">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            <span>Get In Touch</span>
+          </a>
+        </div>
+
+        <div class="shell-stats">
+          <div class="shell-stat">
+            <div class="shell-stat-num">2+</div>
+            <div class="shell-stat-label">Years Exp.</div>
+          </div>
+          <div class="shell-stat">
+            <div class="shell-stat-num">5+</div>
+            <div class="shell-stat-label">Projects</div>
+          </div>
+          <div class="shell-stat">
+            <div class="shell-stat-num">4</div>
+            <div class="shell-stat-label">Companies</div>
+          </div>
+          <div class="shell-stat">
+            <div class="shell-stat-num">9.22</div>
+            <div class="shell-stat-label">CGPA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- React app mounts here and hides the shell -->
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
