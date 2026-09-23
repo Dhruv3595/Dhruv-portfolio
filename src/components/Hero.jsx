@@ -61,7 +61,7 @@ function AnimatedCounter({ target, suffix = '', decimals = 0 }) {
 
 export default function Hero() {
     const [roleIndex, setRoleIndex] = useState(0);
-    const [text, setText] = useState('');
+    const [text, setText] = useState(roles[0]);
     const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {

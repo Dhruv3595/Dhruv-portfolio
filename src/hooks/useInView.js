@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 
-export function useInView(threshold = 0.05, rootMargin = '50px 0px') {
+export function useInView(threshold = 0.01, rootMargin = '100px 0px') {
     const ref = useRef(null);
-    const [isInView, setIsInView] = useState(false);
+    const [isInView, setIsInView] = useState(true);
 
     useEffect(() => {
         const el = ref.current;
